@@ -146,8 +146,10 @@ def model_training(X_train, y_train, numerical_cols, categorical_cols,parameters
     """
     
     ##
-    numerical_preprocessor = Pipeline(steps=[("imputer", IterativeImputer(ExtraTreesRegressor(n_estimators=5,random_state=1,verbose=0),random_state=1,verbose=0,add_indicator=True)),
+    numerical_preprocessor = Pipeline(
                                      ("scaler", MinMaxScaler())])
+    # numerical_preprocessor = Pipeline(steps=[("imputer", IterativeImputer(ExtraTreesRegressor(n_estimators=5,random_state=1,verbose=0),random_state=1,verbose=0,add_indicator=True)),
+    #                                  ("scaler", MinMaxScaler())])
     categorical_preprocessor = Pipeline(steps=[("imputer", SimpleImputer(strategy='constant', fill_value='missing',verbose=0,add_indicator=True)),
                                            ("label_enc", OneHotEncoder(handle_unknown='ignore'))])
     preprocessor = ColumnTransformer(transformers=[("numerical_preprocessor", numerical_preprocessor, numerical_cols),
