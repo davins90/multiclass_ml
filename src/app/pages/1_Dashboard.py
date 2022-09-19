@@ -16,7 +16,7 @@ st.markdown("# Fetal Heart Rate Classification")
 st.markdown("## Dashboard")
 
 # 1.0 Data retrieval
-df = pd.read_pickle('../3_mod.pkl')
+df = pd.read_pickle('./3_mod.pkl')
 file = st.selectbox("Select file to visualize analysis",df.index)
 
 # 2.0 Classification summary
