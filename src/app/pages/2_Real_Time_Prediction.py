@@ -17,7 +17,7 @@ st.markdown("# Fetal Heart Rate Classification")
 st.markdown("## Prediction")
 
 # 1.0 Data retrieval
-df = pd.read_pickle('./3_mod.pkl')
+df = pd.read_pickle('3_mod.pkl')
 
 lbe = st.number_input("Insert a number of LBE, all other values for this demo are already saved",step=0.5)
 st.write("LBE value: ",lbe)
