@@ -17,6 +17,7 @@ st.markdown("# Fetal Heart Rate Classification")
 st.markdown("## Prediction")
 
 # 1.0 Data retrieval
+# df = pd.read_pickle('../src/app/3_mod.pkl')
 df = pd.read_pickle('/app/multiclass_ml/src/app/3_mod.pkl')
 
 lbe = st.number_input("Insert a number of LBE, all other values for this demo are already saved",step=0.5)
@@ -26,6 +27,9 @@ sub = df.sample(1)
 sub['LBE'] = lbe
 
 if st.button("Click here for run prediction"):
+#     model1 = joblib.load('../src/app/model_classe_1.0.pkl')
+#     model2 = joblib.load('../src/app/model_classe_2.0.pkl')
+#     model3 = joblib.load('../src/app/model_classe_3.0.pkl')
     model1 = joblib.load('/app/multiclass_ml/src/app/model_classe_1.0.pkl')
     model2 = joblib.load('/app/multiclass_ml/src/app/model_classe_2.0.pkl')
     model3 = joblib.load('/app/multiclass_ml/src/app/model_classe_3.0.pkl')
