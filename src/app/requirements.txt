@@ -13,7 +13,6 @@ cytoolz==0.11.0
 et-xmlfile==1.1.0
 gitdb==4.0.9
 GitPython==3.1.27
-gmpy2==2.1.0b5
 gower==0.0.5
 graphviz==0.20.1
 HeapDict==1.0.1
