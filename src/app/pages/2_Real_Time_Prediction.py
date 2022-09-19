@@ -26,9 +26,9 @@ sub = df.sample(1)
 sub['LBE'] = lbe
 
 if st.button("Click here for run prediction"):
-    model1 = joblib.load('../src/app/model_classe_1.0.pkl')
-    model2 = joblib.load('../src/app/model_classe_2.0.pkl')
-    model3 = joblib.load('../src/app/model_classe_3.0.pkl')
+    model1 = joblib.load('/app/multiclass_ml/src/app/model_classe_1.0.pkl')
+    model2 = joblib.load('/app/multiclass_ml/src/app/model_classe_2.0.pkl')
+    model3 = joblib.load('/app/multiclass_ml/src/app/model_classe_3.0.pkl')
 
     cols = ['LBE', 'LB', 'AC', 'FM', 'UC', 'ASTV', 'MSTV', 'ALTV', 'MLTV', 'DL',
            'DS', 'DP', 'Width', 'Min', 'Max', 'Nmax', 'Nzeros', 'Mode', 'Mean',
